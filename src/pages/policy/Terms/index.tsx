@@ -9,7 +9,7 @@ const TermsOfService = () => {
     return (
         <>
             <div className="bg-gray-100 dark:bg-gray-900 min-h-screen py-8">
-                <div className="container mx-auto px-4 text-left">
+                <div className="container mx-auto px-4 text-left max-w-4xl">
                     <h1 className="text-3xl font-bold mb-4 text-center text-gray-900 dark:text-gray-200">{t('terms.title')}</h1>
                     <p className="text-center text-gray-600 dark:text-gray-400 mb-8"><strong>{t('terms.effectiveDate')}</strong> April 4, 2025</p>
 
@@ -18,15 +18,15 @@ const TermsOfService = () => {
                     </section>
 
                     <section className="mb-8">
-                        <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-gray-200">{t('terms.eligibility.title')}</h2>
-                        <p className="text-gray-700 dark:text-gray-300">
+                        <h2 className="text-2xl font-bold mb-2 mt-6 text-gray-900 dark:text-gray-200">{t('terms.eligibility.title')}</h2>
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-2">
                             {t('terms.eligibility.content')}
                         </p>
                     </section>
 
                     <section className="mb-8">
-                        <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-gray-200">{t('terms.acceptableUse.title')}</h2>
-                        <p className="text-gray-700 dark:text-gray-300 mb-2">
+                        <h2 className="text-2xl font-bold mb-2 mt-6 text-gray-900 dark:text-gray-200">{t('terms.acceptableUse.title')}</h2>
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-2">
                             {t('terms.acceptableUse.intro')}
                         </p>
                         <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mb-4">
@@ -37,8 +37,8 @@ const TermsOfService = () => {
                     </section>
 
                     <section className="mb-8">
-                        <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-gray-200">{t('terms.userData.title')}</h2>
-                        <p className="text-gray-700 dark:text-gray-300 mb-4">
+                        <h2 className="text-2xl font-bold mb-2  mt-6 text-gray-900 dark:text-gray-200">{t('terms.userData.title')}</h2>
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                             <Trans i18nKey="terms.userData.content">
                                 We only collect publicly available Wikimedia usernames and registration dates. Your data is used solely for campaign and jury process functionalities. Refer to our <Link to="/policy/privacy" className="text-blue-500 hover:underline">Privacy Policy</Link> for more information.
                             </Trans>
