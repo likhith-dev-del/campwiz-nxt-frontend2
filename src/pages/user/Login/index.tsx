@@ -14,7 +14,6 @@ import { useNavigate } from "react-router-dom";
 interface RedirectResponse {
     redirect: string;
 }
-// Mock function - replace with actual implementation
 
 
 const LoginComponent = ({ }: { isMobile: boolean }) => {
@@ -88,7 +87,13 @@ const LoginComponent = ({ }: { isMobile: boolean }) => {
             <Typography variant="h5" sx={{ mb: 2 }}>
                 {t('login.title')}
             </Typography>
-            {error && <Typography variant="body1" color="error" sx={{ mb: 1 }}>{t(error.message)}</Typography>}
+            
+            {error && (
+            <Typography variant="body1" color="error" sx={{ mb: 1 }}>
+                {(error.message)}
+            </Typography>
+            )}
+            
             <Typography variant="body1" sx={{ mb: 2 }}>
                 <Trans
                     i18nKey={'settings.helpTranslation'}
@@ -130,11 +135,11 @@ const LoginComponent = ({ }: { isMobile: boolean }) => {
                     mb: 3
                 }}
                 disabled={clicked}
-                startIcon={<WikipediaIcon />}
-                endIcon={!clicked && <ArrowForward />}
+                startIcon={!clicked ? <WikipediaIcon /> : null}
+                endIcon= {!clicked ? <ArrowForward /> : null}
             >
-                {t('login.loginWithWikimedia')}
-                {clicked && <CircularProgress size={24} sx={{ ml: 1 }} />}
+                {clicked ? "Loading..." :t('login.loginWithWikimedia')}
+                {clicked && <CircularProgress size={21} sx={{ ml: 1 }} />}
             </Button>
             <Typography variant="body1" sx={{ mt: 2 }}>
                 <Trans
